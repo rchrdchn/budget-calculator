@@ -10,16 +10,10 @@ body {
 	/* background-color: #FFFDE7; */
 }
 
-.item {
-	text-align: left;
+.input-group {
+	margin-bottom: 20px;
 }
 
-.remove {
-	float: right;
-	border: none;
-	background: transparent;
-}
-
-.dropdown {
-	position: relative;
+.amount {
+	padding: 0px 46px;
 }
