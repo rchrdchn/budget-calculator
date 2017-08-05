@@ -1,14 +1,11 @@
-count = 1;
-
 function addItem() {
 	const input = document.getElementById('input').value;
 	// if user input is empty, don't add anything to to-do list
 	if (input != '') {
-	const body = document.getElementById('toDoList');
+	const body = document.getElementById('budget');
 	const div = document.createElement('div');
 	const text = document.createElement('li');
-	text.className = 'list-group-item col-md-4 col-md-offset-4 item';
-	text.id = "item"+count;
+	text.className = 'list-group-item col-md-12';
 
 	text.innerHTML = input;
 	body.appendChild(div);
@@ -17,18 +14,7 @@ function addItem() {
 	// clears out input form after content has been added
 	document.getElementById('input').value = '';
 	
-	console.log(input + count);
-
-	// delete this item when clicked
-	const deleteButton = document.createElement('button');
-	deleteButton.className = 'remove';
-	deleteButton.id = 'remote'+count;
-	const deleteButtonText = document.createTextNode('x');
-	deleteButton.appendChild(deleteButtonText);
-	const addButton = document.getElementsByClassName('list-group-item')[count-1];
-	addButton.appendChild(deleteButton);
-
-	return count++;
+	console.log(input);
 }
 
 // adds functionality to Add button
