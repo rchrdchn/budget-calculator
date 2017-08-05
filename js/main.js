@@ -5,7 +5,7 @@ function addItem() {
 	const body = document.getElementById('budget');
 	const div = document.createElement('div');
 	const text = document.createElement('li');
-	text.className = 'list-group-item col-md-12';
+	text.className = 'list-group-item col-md-6';
 
 	text.innerHTML = input;
 	body.appendChild(div);
