@@ -1,18 +1,20 @@
 function addItem() {
-	const input = document.getElementById('input').value;
+	const comments = document.getElementById('comments').value;
+	const amount = document.getElementById('amount').value;
+	let dollar = "$";
 	// if user input is empty, don't add anything to to-do list
-	if (input != '') {
-	const list = document.getElementsByClassName('item-list');
+	if (comments != '') {
+	const list = document.getElementById('item-list');
 	const text = document.createElement('li');
 	text.className = 'list-group-item col-md-12';
 
-	text.innerHTML = input;
+	text.innerHTML = comments + " " + dollar + amount;
 	list.appendChild(text);
 	}
 	// clears out input form after content has been added
-	document.getElementById('input').value = '';
+	document.getElementById('comments').value = '';
 	
-	console.log(input);
+	console.log(comments + " " + dollar + amount);
 }
 
 // adds functionality to Add button
@@ -28,7 +30,7 @@ function deleteItem(item) {
 }
 
 // adds input on Enter/Return key
-const addList = document.getElementById('input');
+const addList = document.getElementById('comments');
 addList.addEventListener('keypress', function(e) {
 	var key = e.which || e.keyCode;
 	if (key === 13) {
