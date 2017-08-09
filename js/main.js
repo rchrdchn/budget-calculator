@@ -2,14 +2,12 @@ function addItem() {
 	const input = document.getElementById('input').value;
 	// if user input is empty, don't add anything to to-do list
 	if (input != '') {
-	const body = document.getElementById('budget');
-	const div = document.createElement('div');
+	const list = document.getElementsByClassName('item-list');
 	const text = document.createElement('li');
-	text.className = 'list-group-item col-md-6';
+	text.className = 'list-group-item col-md-12';
 
 	text.innerHTML = input;
-	body.appendChild(div);
-	div.appendChild(text);
+	list.appendChild(text);
 	}
 	// clears out input form after content has been added
 	document.getElementById('input').value = '';
