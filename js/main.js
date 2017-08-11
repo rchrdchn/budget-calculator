@@ -3,6 +3,7 @@ function addItem() {
 	const comments = document.getElementById('comments').value;
 	const amount = document.getElementById('amount').value;
 	let dollar = "$";
+
 	// if user input is empty, don't add anything to to-do list
 	if (comments != '' && amount != '') {
 	const list = document.getElementById('item-list');
@@ -28,6 +29,7 @@ document.getElementById('add').onclick = function() {
 
 function totalSum() {
 	const totalAmount = document.getElementById('total');
+	totalAmount.innerHTML = amount;
 	return totalAmount;
 }
 
